@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt'
-import {AuthOptions} from 'next-auth'
+import NextAuth, {AuthOptions} from 'next-auth'
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 
@@ -48,4 +48,6 @@ export const authOptions: AuthOptions = {
     secret: process.env.NEXTAUTH_SECRET,
 }
 
-export default authOptions
+export const _handler = NextAuth(authOptions)
+
+

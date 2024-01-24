@@ -1,8 +1,5 @@
-import { authOptions } from "./server"
-import NextAuth from "next-auth/next"
+import {_handler} from './server'
 
-const handler = NextAuth(authOptions)
-
-export { handler as GET, handler as POST}
+export {_handler as GET, _handler as POST} from './server'
 
 
